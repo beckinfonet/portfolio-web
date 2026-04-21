@@ -150,20 +150,79 @@ Which phases cover which requirements. Populated by roadmap creation.
 
 | Requirement | Phase | Status |
 |-------------|-------|--------|
-| FOUND-01 through FOUND-08 | Phase 1 | Pending |
-| DATA-01 through DATA-09 | Phase 2 | Pending |
-| SHELL-01 through SHELL-05 | Phase 3 | Pending |
-| SECT-01 through SECT-07 | Phase 4 | Pending |
-| PROJ-01 through PROJ-07 | Phase 5 | Pending |
-| SEO-01 through SEO-08 | Phase 6 | Pending |
-| A11Y-01 through A11Y-07 | Phase 7 | Pending |
-| PERF-01 through PERF-06 | Phase 7 | Pending |
+| FOUND-01 | Phase 1 | Pending |
+| FOUND-02 | Phase 1 | Pending |
+| FOUND-03 | Phase 1 | Pending |
+| FOUND-04 | Phase 1 | Pending |
+| FOUND-05 | Phase 1 | Pending |
+| FOUND-06 | Phase 1 | Pending |
+| FOUND-07 | Phase 1 | Pending |
+| FOUND-08 | Phase 1 | Pending |
+| A11Y-03 | Phase 1 | Pending |
+| DATA-01 | Phase 2 | Pending |
+| DATA-02 | Phase 2 | Pending |
+| DATA-03 | Phase 2 | Pending |
+| DATA-04 | Phase 2 | Pending |
+| DATA-05 | Phase 2 | Pending |
+| DATA-06 | Phase 2 | Pending |
+| DATA-07 | Phase 2 | Pending |
+| DATA-08 | Phase 2 | Pending |
+| DATA-09 | Phase 2 | Pending |
+| SHELL-01 | Phase 3 | Pending |
+| SHELL-02 | Phase 3 | Pending |
+| SHELL-03 | Phase 3 | Pending |
+| SHELL-04 | Phase 3 | Pending |
+| SHELL-05 | Phase 3 | Pending |
+| SECT-01 | Phase 4 | Pending |
+| SECT-02 | Phase 4 | Pending |
+| SECT-03 | Phase 4 | Pending |
+| SECT-04 | Phase 4 | Pending |
+| SECT-05 | Phase 4 | Pending |
+| SECT-06 | Phase 4 | Pending |
+| SECT-07 | Phase 4 | Pending |
+| PROJ-01 | Phase 5 | Pending |
+| PROJ-02 | Phase 5 | Pending |
+| PROJ-03 | Phase 5 | Pending |
+| PROJ-04 | Phase 5 | Pending |
+| PROJ-05 | Phase 5 | Pending |
+| PROJ-06 | Phase 5 | Pending |
+| PROJ-07 | Phase 5 | Pending |
+| SEO-01 | Phase 6 | Pending |
+| SEO-02 | Phase 6 | Pending |
+| SEO-03 | Phase 6 | Pending |
+| SEO-04 | Phase 6 | Pending |
+| SEO-05 | Phase 6 | Pending |
+| SEO-06 | Phase 6 | Pending |
+| SEO-07 | Phase 6 | Pending |
+| SEO-08 | Phase 6 | Pending |
+| A11Y-01 | Phase 7 | Pending |
+| A11Y-02 | Phase 7 | Pending |
+| A11Y-04 | Phase 7 | Pending |
+| A11Y-05 | Phase 7 | Pending |
+| A11Y-06 | Phase 7 | Pending |
+| A11Y-07 | Phase 7 | Pending |
+| PERF-01 | Phase 7 | Pending |
+| PERF-02 | Phase 7 | Pending |
+| PERF-03 | Phase 7 | Pending |
+| PERF-04 | Phase 7 | Pending |
+| PERF-05 | Phase 7 | Pending |
+| PERF-06 | Phase 7 | Pending |
 
 **Coverage:**
 - v1 requirements: 48 total
 - Mapped to phases: 48
-- Unmapped: 0 ✓
+- Unmapped: 0
+
+**Phase distribution:**
+- Phase 1 (Foundation, Tokens, Theme): 9 requirements
+- Phase 2 (Data Layer and Content Schema): 9 requirements
+- Phase 3 (Layout Shell and Navigation): 5 requirements
+- Phase 4 (Core Sections): 7 requirements
+- Phase 5 (Projects Index and Case Study Detail Pages): 7 requirements
+- Phase 6 (SEO, Metadata, Sitemap, Social Cards): 8 requirements
+- Phase 7 (Accessibility, Performance, Launch Audit): 12 requirements
+- **Total: 48**
 
 ---
 *Requirements defined: 2026-04-21*
-*Last updated: 2026-04-21 after initial definition*
+*Last updated: 2026-04-21 after roadmap creation (A11Y-03 moved from Phase 7 to Phase 1 per tokens-before-components rule)*
