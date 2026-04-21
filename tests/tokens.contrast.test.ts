@@ -4,7 +4,7 @@
 // and src/lib/tokens.ts together — never by weakening the threshold.
 // (Sync discipline: comment-enforced manual sync between globals.css and tokens.ts
 //  per RESEARCH §Pitfall 6 Option 3. Both files MUST change in the same commit.)
-import { describe, test, expect } from "vitest";
+import { describe, expect, test } from "vitest";
 import { hex } from "wcag-contrast";
 import { tokens } from "@/lib/tokens";
 
