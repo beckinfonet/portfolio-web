@@ -1,0 +1,49 @@
+# .github/workflows/ci.yml
+# CI gate: Biome + TypeScript + Vitest contrast + Next build.
+# Runs on every push to main and on every pull request.
+# Source of truth for the four gates: .planning/phases/01-foundation-tokens-theme/01-CONTEXT.md D-07.
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+# Least-privilege token: this workflow reads code only (no deploy, no comments, no releases).
+# Deploy hooks + Lighthouse + broken-link gates land in Phase 7 with elevated perms.
+permissions:
+  contents: read
+
+# Cancel in-flight runs on the same branch when a new push arrives.
+# Avoids burning CI minutes on superseded commits.
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node 22
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Biome (lint + format + import sort)
+        run: npm run ci:biome
+
+      - name: TypeScript typecheck
+        run: npm run typecheck
+
+      - name: Contrast gate (A11Y-03, D-06)
+        run: npm test
+
+      - name: Build
+        run: npm run build
