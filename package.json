@@ -1,0 +1,36 @@
+{
+  "name": "portfolio",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "typecheck": "tsc --noEmit",
+    "lint": "biome lint .",
+    "format": "biome format --write .",
+    "check": "biome check --write .",
+    "ci:biome": "biome ci .",
+    "test": "vitest run",
+    "test:watch": "vitest"
+  },
+  "dependencies": {
+    "next": "16.2.4",
+    "react": "19.2.5",
+    "react-dom": "19.2.5",
+    "geist": "1.7.0",
+    "next-themes": "0.4.6"
+  },
+  "devDependencies": {
+    "typescript": "5.9.3",
+    "@types/react": "19.2.14",
+    "@types/react-dom": "19.2.3",
+    "@types/node": "25.6.0",
+    "tailwindcss": "4.2.4",
+    "@tailwindcss/postcss": "4.2.4",
+    "@biomejs/biome": "2.4.12",
+    "vitest": "4.1.4",
+    "wcag-contrast": "3.0.0",
+    "@types/wcag-contrast": "latest"
+  }
+}
