@@ -12,11 +12,12 @@ A mixed-audience visitor — recruiter, hiring engineer, or potential client —
 
 ### Validated
 
-(None yet — ship to validate)
+- [x] Next.js project scaffolded and deployable to Vercel/Netlify *(Phase 1: Foundation — Next.js 16 App Router + Turbopack; first CI run green on GitHub Actions)*
+- [x] Dark-mode toggle with persisted preference *(Phase 1: next-themes + 44×44 ThemeToggle client leaf; `storageKey="portfolio-theme"`; FOUC-free via `suppressHydrationWarning` + `disableTransitionOnChange`; carried-forward HUMAN-UAT trace in 01-HUMAN-UAT.md)*
+- [x] Minimal / typography-forward design with monospace accents for code/tags *(Phase 1: Tailwind v4 `@theme` tokens + Geist Sans/Mono self-hosted; 10-token type scale; WCAG-AA contrast gate — text-primary 19.8:1, text-secondary 7.8:1)*
 
 ### Active
 
-- [ ] Next.js project scaffolded and deployable to Vercel/Netlify
 - [ ] Landing / hero section that reads the engineer's identity in under 10 seconds
 - [ ] About section with bio (placeholder content, structured for easy swap)
 - [ ] Skills / stack section (explicit technologies grouped by category)
@@ -24,8 +25,6 @@ A mixed-audience visitor — recruiter, hiring engineer, or potential client —
 - [ ] Project detail template supporting write-up, screenshots/media, live demo and repo links
 - [ ] Downloadable resume (PDF) — link in nav and About/Contact
 - [ ] Contact / socials section (email, GitHub, LinkedIn, etc.)
-- [ ] Dark-mode toggle with persisted preference
-- [ ] Minimal / typography-forward design with monospace accents for code/tags
 - [ ] Responsive across mobile, tablet, desktop (recruiters often skim on mobile)
 - [ ] SEO basics — per-page metadata, Open Graph / Twitter social cards, sitemap
 - [ ] Placeholder content wired through a single data source so real content can swap in cleanly later
@@ -86,4 +85,4 @@ This document evolves at phase transitions and milestone boundaries.
 4. Update Context with current state
 
 ---
-*Last updated: 2026-04-21 after initialization*
+*Last updated: 2026-04-21 — Phase 1 complete (Foundation, Tokens, Theme). Remote: https://github.com/beckinfonet/portfolio-web.*

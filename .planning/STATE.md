@@ -2,16 +2,16 @@
 gsd_state_version: 1.0
 milestone: v1.0
 milestone_name: milestone
-status: executing
-stopped_at: Phase 1 Plan 4 complete — all four plans of Phase 1 closed; awaiting orchestrator phase-verification pass
-last_updated: "2026-04-21T22:35:00Z"
-last_activity: 2026-04-21 -- Plan 01-04 complete (GitHub Actions CI workflow with four gates + least-privilege permissions + concurrency cancel + README rewrite; FOUND-07 + FOUND-08 closed; Task 3 approved-as-is partial — CI live-verify deferred until first push to a remote)
+status: phase_complete
+stopped_at: Phase 1 complete — verification passed with 3 HUMAN-UAT items carried forward (live-browser FOUC/fonts/persistence trace, all pre-acknowledged). Ready for Phase 2 (data layer + content schema).
+last_updated: "2026-04-22T00:00:00Z"
+last_activity: 2026-04-21 -- Phase 1 complete (all 4 plans + verification + code review). CI Run #1 green on GitHub Actions. 3 HUMAN-UAT items deferred per user approval.
 progress:
   total_phases: 7
-  completed_phases: 0
+  completed_phases: 1
   total_plans: 4
   completed_plans: 4
-  percent: 100
+  percent: 14
 ---
 
 # Project State
@@ -21,16 +21,16 @@ progress:
 See: .planning/PROJECT.md (updated 2026-04-21)
 
 **Core value:** A mixed-audience visitor — recruiter, hiring engineer, or potential client — lands on the site, grasps who this engineer is within seconds, and can click through to meaningful depth on at least one project.
-**Current focus:** Phase 1 — foundation-tokens-theme
+**Current focus:** Phase 2 — Data Layer and Content Schema (ready to start)
 
 ## Current Position
 
-Phase: 1 (foundation-tokens-theme) — EXECUTING (awaiting orchestrator phase-verification + phase.complete)
-Plan: 4 of 4 complete — all Phase 1 plans closed
-Status: 01-04 complete; all five ROADMAP §Phase 1 Success Criteria satisfied (Success Criterion 3 marked LOCAL-green / CI live-verify deferred until first push to GitHub remote — approved-as-is partial per user); orchestrator's phase-verification pass runs next
-Last activity: 2026-04-21 -- Plan 01-04 complete (GitHub Actions CI workflow with four gates + least-privilege permissions + concurrency cancel + README rewrite; FOUND-07 + FOUND-08 closed; Task 3 approved-as-is partial — CI live-verify deferred until first push to a remote)
+Phase: 1 of 7 COMPLETE → advancing to Phase 2
+Plan: — (next phase not yet planned)
+Status: Phase 1 verified + marked complete. CI Run #1 green on GitHub Actions. 3 HUMAN-UAT items pre-acknowledged and deferred (live browser FOUC/fonts/persistence trace; structure verified correct). Code review advisory: 2 warnings + 3 info items logged in 01-REVIEW.md for future fix pass.
+Last activity: 2026-04-21 -- Phase 1 complete
 
-Progress: [██████████] 100% (4/4 plans in Phase 1; 4/~17 plans overall — Phase 1 ready for phase-exit verification)
+Progress: [█░░░░░░░░░] 14% (1/7 phases complete; 4 plans shipped)
 
 ## Performance Metrics
 

@@ -12,7 +12,7 @@ Seven-phase path from empty repo to a launchable, Lighthouse-grade personal port
 
 Decimal phases appear between their surrounding integers in numeric order.
 
-- [~] **Phase 1: Foundation, Tokens, Theme** - Next.js 16 scaffold, strict TypeScript, Tailwind v4 @theme tokens with WCAG-AA contrast enforced, Geist fonts, FOUC-free dark mode, Biome, CI
+- [x] **Phase 1: Foundation, Tokens, Theme** (2026-04-21) - Next.js 16 scaffold, strict TypeScript, Tailwind v4 @theme tokens with WCAG-AA contrast enforced, Geist fonts, FOUC-free dark mode, Biome, CI
 - [ ] **Phase 2: Data Layer and Content Schema** - Typed data modules, Zod schemas that fail the build on missing case-study fields, MDX loader, four placeholder projects greppable by sentinel
 - [ ] **Phase 3: Layout Shell and Navigation** - Root layout, sticky nav with accessible mobile menu, footer, ThemeToggle client island
 - [ ] **Phase 4: Core Sections (Hero, About, Skills, Contact)** - Home-page sections consuming typed data, resume PDF wired, subtle reduced-motion-respecting entrance animations
@@ -129,7 +129,7 @@ Phases execute in numeric order: 1 → 2 → 3 → 4 → 5 → 6 → 7
 
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
-| 1. Foundation, Tokens, Theme | 4/4 | Executing (awaiting phase-exit verification) | - |
+| 1. Foundation, Tokens, Theme | 4/4 | Complete | 2026-04-21 |
 | 2. Data Layer and Content Schema | 0/TBD | Not started | - |
 | 3. Layout Shell and Navigation | 0/TBD | Not started | - |
 | 4. Core Sections (Hero, About, Skills, Contact) | 0/TBD | Not started | - |
@@ -158,4 +158,4 @@ Phases execute in numeric order: 1 → 2 → 3 → 4 → 5 → 6 → 7
 *Roadmap created: 2026-04-21*
 *Phase 1 planned: 2026-04-21 (4 plans, 3 waves)*
 *Granularity: fine (7 phases)*
-*Last updated: 2026-04-21 — Plan 01-04 complete (GitHub Actions CI four-gate workflow + README rewrite; FOUND-07 + FOUND-08 closed; Task 3 approved-as-is partial — CI live-verify deferred until first push to remote). All 4/4 Phase 1 plans complete; orchestrator phase-verification pass runs next.*
+*Last updated: 2026-04-21 — Phase 1 complete. All 9 Phase 1 requirements (FOUND-01..08 + A11Y-03) satisfied. CI Run #1 green on GitHub Actions. 3 HUMAN-UAT items (live FOUC/fonts/persistence browser trace) pre-acknowledged and deferred. Ready for Phase 2 (data layer + content schema).*
