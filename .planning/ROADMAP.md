@@ -12,7 +12,7 @@ Seven-phase path from empty repo to a launchable, Lighthouse-grade personal port
 
 Decimal phases appear between their surrounding integers in numeric order.
 
-- [ ] **Phase 1: Foundation, Tokens, Theme** - Next.js 16 scaffold, strict TypeScript, Tailwind v4 @theme tokens with WCAG-AA contrast enforced, Geist fonts, FOUC-free dark mode, Biome, CI
+- [~] **Phase 1: Foundation, Tokens, Theme** - Next.js 16 scaffold, strict TypeScript, Tailwind v4 @theme tokens with WCAG-AA contrast enforced, Geist fonts, FOUC-free dark mode, Biome, CI
 - [ ] **Phase 2: Data Layer and Content Schema** - Typed data modules, Zod schemas that fail the build on missing case-study fields, MDX loader, four placeholder projects greppable by sentinel
 - [ ] **Phase 3: Layout Shell and Navigation** - Root layout, sticky nav with accessible mobile menu, footer, ThemeToggle client island
 - [ ] **Phase 4: Core Sections (Hero, About, Skills, Contact)** - Home-page sections consuming typed data, resume PDF wired, subtle reduced-motion-respecting entrance animations
@@ -36,7 +36,7 @@ Decimal phases appear between their surrounding integers in numeric order.
 Plans:
 - [x] 01-01-PLAN.md — Scaffold Next.js 16 in place, install pinned deps (Biome-only, no ESLint), harden tsconfig strict flags, configure biome.json + vitest.config.ts, purge starter assets [FOUND-01, FOUND-06, FOUND-08]
 - [x] 01-02-PLAN.md — Write Tailwind v4 `@theme` token layer in globals.css, mirror six contrast-bearing hex values into src/lib/tokens.ts, wire Vitest contrast gate with six WCAG assertions (TDD RED → GREEN) [FOUND-02, FOUND-04, A11Y-03]
-- [ ] 01-03-PLAN.md — Wire Geist self-hosted via `geist` npm (replacing scaffolded `next/font/google`), implement `next-themes` ThemeProvider with five FOUC-preventing props, ship ThemeToggle client leaf with hydration guard + 44×44 touch target, rewrite layout/page.tsx as RSC proof-of-life with sentinel copy [FOUND-03, FOUND-05]
+- [x] 01-03-PLAN.md — Wire Geist self-hosted via `geist` npm (replacing scaffolded `next/font/google`), implement `next-themes` ThemeProvider with five FOUC-preventing props, ship ThemeToggle client leaf with hydration guard + 44×44 touch target, rewrite layout/page.tsx as RSC proof-of-life with sentinel copy [FOUND-03, FOUND-05]
 - [ ] 01-04-PLAN.md — Ship four-gate GitHub Actions CI workflow (biome + typecheck + contrast + build) with least-privilege permissions, rewrite README.md to reflect the actual Portfolio project, phase-exit sign-off against all five Success Criteria [FOUND-07, FOUND-08]
 **UI hint**: yes
 
@@ -129,7 +129,7 @@ Phases execute in numeric order: 1 → 2 → 3 → 4 → 5 → 6 → 7
 
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
-| 1. Foundation, Tokens, Theme | 2/4 | Executing | - |
+| 1. Foundation, Tokens, Theme | 3/4 | Executing | - |
 | 2. Data Layer and Content Schema | 0/TBD | Not started | - |
 | 3. Layout Shell and Navigation | 0/TBD | Not started | - |
 | 4. Core Sections (Hero, About, Skills, Contact) | 0/TBD | Not started | - |
@@ -158,3 +158,4 @@ Phases execute in numeric order: 1 → 2 → 3 → 4 → 5 → 6 → 7
 *Roadmap created: 2026-04-21*
 *Phase 1 planned: 2026-04-21 (4 plans, 3 waves)*
 *Granularity: fine (7 phases)*
+*Last updated: 2026-04-21 — Plan 01-03 complete (Geist + next-themes + RSC layout + ThemeToggle leaf; FOUND-03 + FOUND-05 approved-as-is)*

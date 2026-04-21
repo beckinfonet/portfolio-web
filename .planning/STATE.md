@@ -3,15 +3,15 @@ gsd_state_version: 1.0
 milestone: v1.0
 milestone_name: milestone
 status: executing
-stopped_at: Phase 1 Plan 2 complete — ready for Plan 3 (Geist + next-themes + layout + ThemeToggle leaf)
-last_updated: "2026-04-21T19:28:14Z"
-last_activity: 2026-04-21 -- Plan 01-02 complete (Tailwind v4 @theme tokens + WCAG contrast gate, TDD RED→GREEN)
+stopped_at: Phase 1 Plan 3 complete — ready for Plan 4 (CI + README + phase-exit sign-off)
+last_updated: "2026-04-21T22:01:00Z"
+last_activity: 2026-04-21 -- Plan 01-03 complete (Geist self-hosted + next-themes wired + RSC layout/page + ThemeToggle client leaf; FOUND-03 + FOUND-05 approved-as-is)
 progress:
   total_phases: 7
   completed_phases: 0
   total_plans: 4
-  completed_plans: 2
-  percent: 50
+  completed_plans: 3
+  percent: 75
 ---
 
 # Project State
@@ -26,30 +26,30 @@ See: .planning/PROJECT.md (updated 2026-04-21)
 ## Current Position
 
 Phase: 1 (foundation-tokens-theme) — EXECUTING
-Plan: 3 of 4 (next)
-Status: 01-02 complete; ready to execute 01-03 (Geist + next-themes + layout + ThemeToggle leaf)
-Last activity: 2026-04-21 -- Plan 01-02 complete (Tailwind v4 @theme tokens + WCAG contrast gate, TDD RED→GREEN)
+Plan: 4 of 4 (next — last plan of Phase 1)
+Status: 01-03 complete; ready to execute 01-04 (CI workflow + README rewrite + phase-exit sign-off)
+Last activity: 2026-04-21 -- Plan 01-03 complete (Geist self-hosted + next-themes wired + RSC layout/page + ThemeToggle client leaf; FOUND-03 + FOUND-05 approved-as-is)
 
-Progress: [█████░░░░░] 50% (2/4 plans in Phase 1; 2/~17 plans overall)
+Progress: [████████░░] 75% (3/4 plans in Phase 1; 3/~17 plans overall)
 
 ## Performance Metrics
 
 **Velocity:**
 
-- Total plans completed: 2
-- Average duration: 8.5 min
-- Total execution time: 17 min
+- Total plans completed: 3
+- Average duration: 6.7 min (automation only; checkpoint wait excluded)
+- Total execution time: 20 min (automation only)
 
 **By Phase:**
 
 | Phase | Plans | Total | Avg/Plan |
 |-------|-------|-------|----------|
-| 1 (foundation-tokens-theme) | 2/4 | 17 min | 8.5 min |
+| 1 (foundation-tokens-theme) | 3/4 | 20 min | 6.7 min |
 
 **Recent Trend:**
 
-- Last 5 plans: 01-01 (12 min, 4 commits: 5eee48c, fd9febb, 25b3456, 2c7a909), 01-02 (5 min, 2 commits: 3d7cc5b, 0a620e6)
-- Trend: velocity up — TDD plan with tight scope ran clean in 5 min
+- Last 5 plans: 01-01 (12 min, 4 commits: 5eee48c, fd9febb, 25b3456, 2c7a909), 01-02 (5 min, 2 commits: 3d7cc5b, 0a620e6), 01-03 (3 min automation, 2 commits: 361d7ac, a340955; plus user-verified checkpoint)
+- Trend: velocity up — tightly scoped plans with UI-SPEC-exact contracts run clean on first attempt; 01-03 closed with zero deviations
 
 *Updated after each plan completion*
 
@@ -79,6 +79,13 @@ Plan 01-02 decisions (2026-04-21):
 - Accepted Biome auto-formatting on globals.css (comment spacing, selector splitting) and tokens.test.ts (import order) — D-08 ceded format decisions to Biome
 - Committed Next.js's auto-regeneration of next-env.d.ts alongside the GREEN commit (routes.d.ts path shifted dev/types → types on first prod build)
 
+Plan 01-03 decisions (2026-04-21):
+
+- Committed to the providers/ vs components/ namespace split on first client-component plan (PATTERNS §11) — src/providers/ for context-shaped wrappers, src/components/ for rendered leaves. Downstream Phase 3 MobileMenu and Phase 4 MotionConfig will inherit this boundary
+- Accepted user "approved-as-is" for the FOUND-03/FOUND-05 human-verify checkpoint without a separately captured DevTools Network/Performance trace. Verification relied on served-HTML grep (zero fonts.gstatic.com / fonts.googleapis.com references; Geist served from /_next/static/media/), user-supplied dark-mode screenshot of first paint, and the full four-gate green suite. Phase 7 Lighthouse CI + Playwright E2E re-verifies on the deployed preview, which is the stronger gate
+- Used raw Unicode glyphs (☀ / ☾) in Phase 1 instead of lucide-react; Phase 3 swaps to <Sun />/<Moon /> when the mobile-menu primitive also arrives, avoiding bundling lucide-react for a single icon usage
+- Terminated the background dev server (blc4419ca) on plan close so Plan 04 / downstream plans spawn a clean next dev rather than racing a stale one
+
 ### Pending Todos
 
 None yet.
@@ -87,9 +94,10 @@ None yet.
 
 Design-judgment inputs flagged by research, to resolve before or during Phase 1:
 
-- Final typography choice — LOCKED (Geist Sans + Geist Mono via `geist` npm; CONTEXT D-01)
-- Vercel vs Netlify deployment — still open; depends on commercial-use intent (freelance rate card → Netlify). Phase 7 concern, not blocking for Plans 01-03/04.
+- Final typography choice — LOCKED (Geist Sans + Geist Mono via `geist` npm; CONTEXT D-01). Wired in Plan 01-03 via geist/font/sans + geist/font/mono; self-hosted confirmed.
+- Vercel vs Netlify deployment — still open; depends on commercial-use intent (freelance rate card → Netlify). Phase 7 concern, not blocking for Plan 01-04.
 - Exact color palette / accent hue — LOCKED (Plan 01-02 shipped: light accent #0057ff, dark accent #4d8bff, monochrome base #ffffff/#0a0a0a with surface + border + text-primary/secondary. All six contrast ratios pre-verified and CI-gated.)
+- FOUND-05 verification rigor — Plan 01-03 approved-as-is; formal Slow-3G Performance trace deferred to Phase 7 Playwright E2E + Lighthouse CI on the deployed preview.
 
 ## Deferred Items
 
@@ -101,6 +109,6 @@ Items acknowledged and carried forward from previous milestone close:
 
 ## Session Continuity
 
-Last session: 2026-04-21T19:28:14Z
-Stopped at: Plan 01-02 complete — ready for Plan 3 (Geist + next-themes + layout + ThemeToggle leaf)
-Resume file: .planning/phases/01-foundation-tokens-theme/01-03-PLAN.md
+Last session: 2026-04-21T22:01:00Z
+Stopped at: Plan 01-03 complete — ready for Plan 4 (CI workflow + README rewrite + phase-exit sign-off)
+Resume file: .planning/phases/01-foundation-tokens-theme/01-04-PLAN.md

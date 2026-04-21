@@ -13,9 +13,9 @@ Scaffold, tooling, tokens, theme architecture.
 
 - [x] **FOUND-01**: Next.js 16 App Router project scaffolded with TypeScript strict (`strict: true`, `noUncheckedIndexedAccess`, `verbatimModuleSyntax`)
 - [x] **FOUND-02**: Tailwind CSS v4 installed with CSS-first `@theme` design tokens in `globals.css` (light + dark values for text, background, surface, border, accent)
-- [ ] **FOUND-03**: Geist Sans + Geist Mono loaded via `next/font` (self-hosted, no Google Fonts request)
+- [x] **FOUND-03**: Geist Sans + Geist Mono loaded via `next/font` (self-hosted, no Google Fonts request)
 - [x] **FOUND-04**: Typography scale defined as design tokens (display, h1–h4, body, caption, mono-sm/base) and applied via Tailwind utilities
-- [ ] **FOUND-05**: Dark-mode toggle implemented via `next-themes`, FOUC-free (blocking inline script before paint), `suppressHydrationWarning` on `<html>`, system preference as default, explicit override persisted
+- [x] **FOUND-05**: Dark-mode toggle implemented via `next-themes`, FOUC-free (blocking inline script before paint), `suppressHydrationWarning` on `<html>`, system preference as default, explicit override persisted
 - [x] **FOUND-06**: Biome installed for lint + format; `npm run lint` and `npm run format` scripts pass on empty project
 - [ ] **FOUND-07**: CI workflow runs lint + type-check + build on every push
 - [x] **FOUND-08**: Repository is a clean Next.js project — no unused starter templates, README reflects actual project
@@ -152,9 +152,9 @@ Which phases cover which requirements. Populated by roadmap creation.
 |-------------|-------|--------|
 | FOUND-01 | Phase 1 | Complete (01-01, 2026-04-21) |
 | FOUND-02 | Phase 1 | Complete (01-02, 2026-04-21) |
-| FOUND-03 | Phase 1 | Pending |
+| FOUND-03 | Phase 1 | Complete (01-03, 2026-04-21) |
 | FOUND-04 | Phase 1 | Complete (01-02, 2026-04-21) |
-| FOUND-05 | Phase 1 | Pending |
+| FOUND-05 | Phase 1 | Complete (01-03, 2026-04-21) |
 | FOUND-06 | Phase 1 | Complete (01-01, 2026-04-21) |
 | FOUND-07 | Phase 1 | Pending |
 | FOUND-08 | Phase 1 | Complete (01-01, 2026-04-21) |
@@ -225,4 +225,4 @@ Which phases cover which requirements. Populated by roadmap creation.
 
 ---
 *Requirements defined: 2026-04-21*
-*Last updated: 2026-04-21 after Plan 01-02 complete (FOUND-02, FOUND-04, A11Y-03 checked off — token layer + contrast gate shipped)*
+*Last updated: 2026-04-21 after Plan 01-03 complete (FOUND-03 + FOUND-05 checked off — Geist self-hosted via geist npm + next-themes wired with five FOUC-preventing props; approved-as-is)*
