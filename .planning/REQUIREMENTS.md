@@ -17,7 +17,7 @@ Scaffold, tooling, tokens, theme architecture.
 - [x] **FOUND-04**: Typography scale defined as design tokens (display, h1–h4, body, caption, mono-sm/base) and applied via Tailwind utilities
 - [x] **FOUND-05**: Dark-mode toggle implemented via `next-themes`, FOUC-free (blocking inline script before paint), `suppressHydrationWarning` on `<html>`, system preference as default, explicit override persisted
 - [x] **FOUND-06**: Biome installed for lint + format; `npm run lint` and `npm run format` scripts pass on empty project
-- [ ] **FOUND-07**: CI workflow runs lint + type-check + build on every push
+- [x] **FOUND-07**: CI workflow runs lint + type-check + build on every push
 - [x] **FOUND-08**: Repository is a clean Next.js project — no unused starter templates, README reflects actual project
 
 ### Data Layer
@@ -156,8 +156,8 @@ Which phases cover which requirements. Populated by roadmap creation.
 | FOUND-04 | Phase 1 | Complete (01-02, 2026-04-21) |
 | FOUND-05 | Phase 1 | Complete (01-03, 2026-04-21) |
 | FOUND-06 | Phase 1 | Complete (01-01, 2026-04-21) |
-| FOUND-07 | Phase 1 | Pending |
-| FOUND-08 | Phase 1 | Complete (01-01, 2026-04-21) |
+| FOUND-07 | Phase 1 | Complete (01-04, 2026-04-21 — CI workflow with four gates; live-verify deferred to first push to remote, approved-as-is partial) |
+| FOUND-08 | Phase 1 | Complete (01-01 clean tree + 01-04 README rewrite, 2026-04-21) |
 | A11Y-03 | Phase 1 | Complete (01-02, 2026-04-21) |
 | DATA-01 | Phase 2 | Pending |
 | DATA-02 | Phase 2 | Pending |
@@ -225,4 +225,4 @@ Which phases cover which requirements. Populated by roadmap creation.
 
 ---
 *Requirements defined: 2026-04-21*
-*Last updated: 2026-04-21 after Plan 01-03 complete (FOUND-03 + FOUND-05 checked off — Geist self-hosted via geist npm + next-themes wired with five FOUC-preventing props; approved-as-is)*
+*Last updated: 2026-04-21 after Plan 01-04 complete (FOUND-07 + FOUND-08 checked off — GitHub Actions CI workflow with four gates + least-privilege permissions + concurrency cancel + README rewrite to reflect actual Portfolio project; Task 3 approved-as-is partial, CI live-verify deferred until first push to remote). All 9 Phase 1 requirements complete.*
