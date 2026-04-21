@@ -3,15 +3,15 @@ gsd_state_version: 1.0
 milestone: v1.0
 milestone_name: milestone
 status: executing
-stopped_at: Phase 1 Plan 1 complete — ready for Plan 2 (token layer + contrast gate)
-last_updated: "2026-04-21T19:17:14Z"
-last_activity: 2026-04-21 -- Plan 01-01 complete (scaffold + pinned deps + strict config + clean tree)
+stopped_at: Phase 1 Plan 2 complete — ready for Plan 3 (Geist + next-themes + layout + ThemeToggle leaf)
+last_updated: "2026-04-21T19:28:14Z"
+last_activity: 2026-04-21 -- Plan 01-02 complete (Tailwind v4 @theme tokens + WCAG contrast gate, TDD RED→GREEN)
 progress:
   total_phases: 7
   completed_phases: 0
   total_plans: 4
-  completed_plans: 1
-  percent: 25
+  completed_plans: 2
+  percent: 50
 ---
 
 # Project State
@@ -26,30 +26,30 @@ See: .planning/PROJECT.md (updated 2026-04-21)
 ## Current Position
 
 Phase: 1 (foundation-tokens-theme) — EXECUTING
-Plan: 2 of 4 (next)
-Status: 01-01 complete; ready to execute 01-02 (tokens + contrast gate)
-Last activity: 2026-04-21 -- Plan 01-01 complete (scaffold + pinned deps + strict config + clean tree)
+Plan: 3 of 4 (next)
+Status: 01-02 complete; ready to execute 01-03 (Geist + next-themes + layout + ThemeToggle leaf)
+Last activity: 2026-04-21 -- Plan 01-02 complete (Tailwind v4 @theme tokens + WCAG contrast gate, TDD RED→GREEN)
 
-Progress: [██░░░░░░░░] 25% (1/4 plans in Phase 1; 1/~17 plans overall)
+Progress: [█████░░░░░] 50% (2/4 plans in Phase 1; 2/~17 plans overall)
 
 ## Performance Metrics
 
 **Velocity:**
 
-- Total plans completed: 1
-- Average duration: 12 min
-- Total execution time: 12 min
+- Total plans completed: 2
+- Average duration: 8.5 min
+- Total execution time: 17 min
 
 **By Phase:**
 
 | Phase | Plans | Total | Avg/Plan |
 |-------|-------|-------|----------|
-| 1 (foundation-tokens-theme) | 1/4 | 12 min | 12 min |
+| 1 (foundation-tokens-theme) | 2/4 | 17 min | 8.5 min |
 
 **Recent Trend:**
 
-- Last 5 plans: 01-01 (12 min, 4 commits: 5eee48c, fd9febb, 25b3456, 2c7a909)
-- Trend: first data point — no trend yet
+- Last 5 plans: 01-01 (12 min, 4 commits: 5eee48c, fd9febb, 25b3456, 2c7a909), 01-02 (5 min, 2 commits: 3d7cc5b, 0a620e6)
+- Trend: velocity up — TDD plan with tight scope ran clean in 5 min
 
 *Updated after each plan completion*
 
@@ -72,6 +72,13 @@ Plan 01-01 decisions (2026-04-21):
 - Un-ignored `.env.example` and `next-env.d.ts` in `.gitignore` (templates + Next-managed type decl must be committed)
 - Deferred scaffold-leftover SVG references in `src/app/page.tsx` (lines 9, 46) to Plan 03, which owns the page.tsx rewrite
 
+Plan 01-02 decisions (2026-04-21):
+
+- Adopted UI-SPEC's comment-enforced manual sync (RESEARCH §Pitfall 6 Option 3) between globals.css and src/lib/tokens.ts over regex-parse (Option 2); small six-value token set + conspicuous comments + the contrast test make drift catchable without extra code
+- Kept `!important` declarations in the prefers-reduced-motion reset despite 4 Biome warnings; the reset is binding per UI-SPEC and must beat any future component animation CSS
+- Accepted Biome auto-formatting on globals.css (comment spacing, selector splitting) and tokens.test.ts (import order) — D-08 ceded format decisions to Biome
+- Committed Next.js's auto-regeneration of next-env.d.ts alongside the GREEN commit (routes.d.ts path shifted dev/types → types on first prod build)
+
 ### Pending Todos
 
 None yet.
@@ -80,9 +87,9 @@ None yet.
 
 Design-judgment inputs flagged by research, to resolve before or during Phase 1:
 
-- Final typography choice (Geist default vs Inter + JetBrains Mono vs IBM Plex) — lock before tokens ship
-- Vercel vs Netlify deployment — depends on commercial-use intent (freelance rate card → Netlify)
-- Exact color palette / accent hue — lock before `@theme` block is written
+- Final typography choice — LOCKED (Geist Sans + Geist Mono via `geist` npm; CONTEXT D-01)
+- Vercel vs Netlify deployment — still open; depends on commercial-use intent (freelance rate card → Netlify). Phase 7 concern, not blocking for Plans 01-03/04.
+- Exact color palette / accent hue — LOCKED (Plan 01-02 shipped: light accent #0057ff, dark accent #4d8bff, monochrome base #ffffff/#0a0a0a with surface + border + text-primary/secondary. All six contrast ratios pre-verified and CI-gated.)
 
 ## Deferred Items
 
@@ -94,6 +101,6 @@ Items acknowledged and carried forward from previous milestone close:
 
 ## Session Continuity
 
-Last session: 2026-04-21T19:17:14Z
-Stopped at: Plan 01-01 complete — ready for Plan 2 (token layer + contrast gate)
-Resume file: .planning/phases/01-foundation-tokens-theme/01-02-PLAN.md
+Last session: 2026-04-21T19:28:14Z
+Stopped at: Plan 01-02 complete — ready for Plan 3 (Geist + next-themes + layout + ThemeToggle leaf)
+Resume file: .planning/phases/01-foundation-tokens-theme/01-03-PLAN.md

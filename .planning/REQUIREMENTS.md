@@ -12,9 +12,9 @@ Requirements for initial release. Each maps to exactly one roadmap phase.
 Scaffold, tooling, tokens, theme architecture.
 
 - [x] **FOUND-01**: Next.js 16 App Router project scaffolded with TypeScript strict (`strict: true`, `noUncheckedIndexedAccess`, `verbatimModuleSyntax`)
-- [ ] **FOUND-02**: Tailwind CSS v4 installed with CSS-first `@theme` design tokens in `globals.css` (light + dark values for text, background, surface, border, accent)
+- [x] **FOUND-02**: Tailwind CSS v4 installed with CSS-first `@theme` design tokens in `globals.css` (light + dark values for text, background, surface, border, accent)
 - [ ] **FOUND-03**: Geist Sans + Geist Mono loaded via `next/font` (self-hosted, no Google Fonts request)
-- [ ] **FOUND-04**: Typography scale defined as design tokens (display, h1–h4, body, caption, mono-sm/base) and applied via Tailwind utilities
+- [x] **FOUND-04**: Typography scale defined as design tokens (display, h1–h4, body, caption, mono-sm/base) and applied via Tailwind utilities
 - [ ] **FOUND-05**: Dark-mode toggle implemented via `next-themes`, FOUC-free (blocking inline script before paint), `suppressHydrationWarning` on `<html>`, system preference as default, explicit override persisted
 - [x] **FOUND-06**: Biome installed for lint + format; `npm run lint` and `npm run format` scripts pass on empty project
 - [ ] **FOUND-07**: CI workflow runs lint + type-check + build on every push
@@ -87,7 +87,7 @@ Baseline accessibility is table-stakes for a craft-signaling portfolio.
 
 - [ ] **A11Y-01**: Every page uses semantic HTML — `<header>`, `<nav>`, `<main>`, `<section>`, `<footer>`, heading levels in order
 - [ ] **A11Y-02**: Full keyboard navigation works — tab order is logical, visible focus ring on every interactive element, no keyboard traps
-- [ ] **A11Y-03**: Design tokens enforce WCAG AA contrast in both themes: `--text-primary` ≥7:1, `--text-secondary` ≥4.5:1, interactive elements ≥3:1
+- [x] **A11Y-03**: Design tokens enforce WCAG AA contrast in both themes: `--text-primary` ≥7:1, `--text-secondary` ≥4.5:1, interactive elements ≥3:1
 - [ ] **A11Y-04**: All images have descriptive `alt` text; decorative images use `alt=""`
 - [ ] **A11Y-05**: Animations respect `prefers-reduced-motion: reduce` — reduced/disabled when set
 - [ ] **A11Y-06**: Responsive at 375px mobile width through desktop — no horizontal scroll, touch targets ≥44×44px
@@ -151,14 +151,14 @@ Which phases cover which requirements. Populated by roadmap creation.
 | Requirement | Phase | Status |
 |-------------|-------|--------|
 | FOUND-01 | Phase 1 | Complete (01-01, 2026-04-21) |
-| FOUND-02 | Phase 1 | Pending |
+| FOUND-02 | Phase 1 | Complete (01-02, 2026-04-21) |
 | FOUND-03 | Phase 1 | Pending |
-| FOUND-04 | Phase 1 | Pending |
+| FOUND-04 | Phase 1 | Complete (01-02, 2026-04-21) |
 | FOUND-05 | Phase 1 | Pending |
 | FOUND-06 | Phase 1 | Complete (01-01, 2026-04-21) |
 | FOUND-07 | Phase 1 | Pending |
 | FOUND-08 | Phase 1 | Complete (01-01, 2026-04-21) |
-| A11Y-03 | Phase 1 | Pending |
+| A11Y-03 | Phase 1 | Complete (01-02, 2026-04-21) |
 | DATA-01 | Phase 2 | Pending |
 | DATA-02 | Phase 2 | Pending |
 | DATA-03 | Phase 2 | Pending |
@@ -225,4 +225,4 @@ Which phases cover which requirements. Populated by roadmap creation.
 
 ---
 *Requirements defined: 2026-04-21*
-*Last updated: 2026-04-21 after roadmap creation (A11Y-03 moved from Phase 7 to Phase 1 per tokens-before-components rule)*
+*Last updated: 2026-04-21 after Plan 01-02 complete (FOUND-02, FOUND-04, A11Y-03 checked off — token layer + contrast gate shipped)*
