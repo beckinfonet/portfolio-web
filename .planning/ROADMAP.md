@@ -32,7 +32,12 @@ Decimal phases appear between their surrounding integers in numeric order.
   3. `npm run lint`, `npm run format`, `tsc --noEmit`, and `npm run build` all succeed locally, and the same commands run green in CI on every push
   4. Design tokens in `globals.css` pass automated contrast checks: `--text-primary` against `--bg` ≥7:1 and `--text-secondary` ≥4.5:1 in both light and dark themes
   5. `git ls-files` shows a clean, starter-template-free repo whose README reflects the actual project name and purpose
-**Plans**: TBD
+**Plans**: 4 plans
+Plans:
+- [ ] 01-01-PLAN.md — Scaffold Next.js 16 in place, install pinned deps (Biome-only, no ESLint), harden tsconfig strict flags, configure biome.json + vitest.config.ts, purge starter assets [FOUND-01, FOUND-06, FOUND-08]
+- [ ] 01-02-PLAN.md — Write Tailwind v4 `@theme` token layer in globals.css, mirror six contrast-bearing hex values into src/lib/tokens.ts, wire Vitest contrast gate with six WCAG assertions (TDD RED → GREEN) [FOUND-02, FOUND-04, A11Y-03]
+- [ ] 01-03-PLAN.md — Wire Geist self-hosted via `geist` npm (replacing scaffolded `next/font/google`), implement `next-themes` ThemeProvider with five FOUC-preventing props, ship ThemeToggle client leaf with hydration guard + 44×44 touch target, rewrite layout/page.tsx as RSC proof-of-life with sentinel copy [FOUND-03, FOUND-05]
+- [ ] 01-04-PLAN.md — Ship four-gate GitHub Actions CI workflow (biome + typecheck + contrast + build) with least-privilege permissions, rewrite README.md to reflect the actual Portfolio project, phase-exit sign-off against all five Success Criteria [FOUND-07, FOUND-08]
 **UI hint**: yes
 
 ### Phase 2: Data Layer and Content Schema
@@ -124,7 +129,7 @@ Phases execute in numeric order: 1 → 2 → 3 → 4 → 5 → 6 → 7
 
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
-| 1. Foundation, Tokens, Theme | 0/TBD | Not started | - |
+| 1. Foundation, Tokens, Theme | 0/4 | Planned | - |
 | 2. Data Layer and Content Schema | 0/TBD | Not started | - |
 | 3. Layout Shell and Navigation | 0/TBD | Not started | - |
 | 4. Core Sections (Hero, About, Skills, Contact) | 0/TBD | Not started | - |
@@ -151,4 +156,5 @@ Phases execute in numeric order: 1 → 2 → 3 → 4 → 5 → 6 → 7
 
 ---
 *Roadmap created: 2026-04-21*
+*Phase 1 planned: 2026-04-21 (4 plans, 3 waves)*
 *Granularity: fine (7 phases)*

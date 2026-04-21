@@ -905,27 +905,25 @@ Files that must exist before implementation work can produce greens:
 
 **How the planner should use this log:** Every assumed claim has a fallback path documented. None is a load-bearing assumption that would invalidate the plan if wrong — they're all "preferred path is X, fallback is Y, test will catch the mistake."
 
-## Open Questions
+## Open Questions (RESOLVED)
 
-1. **Which approach for contrast-test source of truth?**
-   - What we know: token hex values exist in both `globals.css` (consumed by Tailwind) and `src/lib/tokens.ts` (consumed by the test). Three options described in Pitfall 6.
-   - What's unclear: Which of the three the planner will pick.
-   - Recommendation: **Option 2** — parse `globals.css` in the test with a simple regex extractor. Eliminates drift risk; minimal cost. But the planner may prefer Option 3 (comment-enforced manual sync) as the literally simplest thing. Either is acceptable; document the choice.
+All four questions were closed during planning (Plans 01-02 and 01-03). Resolutions are locked below; re-opening requires a new discuss-phase.
 
-2. **Exact color palette and accent hue.**
-   - What we know: monochrome base, not pure `#000` in dark, at most one accent.
-   - What's unclear: the exact accent hue (blue? green? orange? deliberate no-accent?).
-   - Recommendation: Planner picks a neutral blue (`#0057ff` light / `#4d8bff` dark) as a reasonable default that's easy to dial contrast for. Explicitly leave room for the engineer to substitute later — the Phase 2 data-layer content swap is the right moment to revisit if the palette feels wrong.
+1. **Contrast-test source of truth** — **RESOLVED: Option 3 (comment-enforced manual sync).**
+   - Token hex values are authored in `app/globals.css` (`@theme` block) and mirrored in `src/lib/tokens.ts` for the Node-side contrast test. Both files carry a load-bearing comment block naming each other as the paired source, so a drift is caught in code review and by the test itself failing when one side changes without the other.
+   - Decision committed by: `01-02-PLAN.md` Task 1 (`src/lib/tokens.ts` + contrast test). Option 2 (regex-extract from CSS) was considered and rejected as unnecessary complexity for a 6-pair ramp.
 
-3. **Type-scale ratio commit.**
-   - What we know: discretion area; 1.25 (major third) is the recommended default.
-   - What's unclear: whether to ship 1.25 or 1.2 (minor third, less contrast between sizes) or 1.333 (perfect fourth, more).
-   - Recommendation: 1.25. It's the default for a reason — readable without being theatrical. Lock it in the token block; easy to swap later by changing the `--text-*` calculation.
+2. **Exact color palette and accent hue** — **RESOLVED: neutral blue accent (`#0057ff` light / `#4d8bff` dark) on a near-black/near-white monochrome base.**
+   - Dark base is `#0a0a0a` (not pure `#000`, per PITFALLS.md §4). Neutral ramp and accent pairings are encoded in the 6 contrast assertions in `scripts/check-contrast.ts` (all ≥7:1 or ≥4.5:1 as appropriate).
+   - Decision committed by: `01-02-PLAN.md` token block + contrast test. Palette may be revisited in Phase 2 content swap if content-driven needs emerge; any swap must re-pass the same 6 assertions.
 
-4. **Font weight tokens — do we need `--font-weight-extrabold: 800`?**
-   - What we know: D-03 says "display headings 700–800"; discretion says default weight tokens are 400/500/700.
-   - What's unclear: whether to explicitly tokenize 800 or just use Tailwind's built-in `font-extrabold` (the v4 default `--font-weight-extrabold` token generates `font-extrabold` for free).
-   - Recommendation: rely on the Tailwind v4 default weight tokens (they cover 100-900 under `--font-weight-*` by default); no need to override unless D-03's "700-800" becomes restrictive.
+3. **Type-scale ratio** — **RESOLVED: 1.25 (major third), 1rem base.**
+   - All `--text-*` tokens derive from `1rem × 1.25^n` in the `@theme` block. Expressed as `rem`; no hard-coded `px` in type tokens.
+   - Decision committed by: `01-02-PLAN.md` token block.
+
+4. **`--font-weight-extrabold: 800` tokenization** — **RESOLVED: rely on Tailwind v4's built-in `--font-weight-*` defaults (100–900); no override.**
+   - The plan ships weight tokens only for the 400/500/700/800 slots actually used (body/medium/bold/display), consuming them via `font-sans font-extrabold` in the page proof-of-life without creating a custom `--font-weight-extrabold` token.
+   - Decision committed by: `01-03-PLAN.md` page proof-of-life (consumes `font-extrabold`); `01-02-PLAN.md` does not author a custom 800 token.
 
 ## Sources
 
