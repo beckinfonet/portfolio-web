@@ -2,10 +2,11 @@
 gsd_state_version: 1.0
 milestone: v1.0
 milestone_name: milestone
-status: phase_complete
-stopped_at: Phase 1 complete — verification passed with 3 HUMAN-UAT items carried forward (live-browser FOUC/fonts/persistence trace, all pre-acknowledged). Ready for Phase 2 (data layer + content schema).
+status: context_gathered
+stopped_at: Phase 2 context gathered — 5 gray areas decided (schema completeness, links shape, skills categorization, placeholder texture, site config scope). Resume via /gsd-plan-phase 2.
 last_updated: "2026-04-22T00:00:00Z"
-last_activity: 2026-04-21 -- Phase 1 complete (all 4 plans + verification + code review). CI Run #1 green on GitHub Actions. 3 HUMAN-UAT items deferred per user approval.
+last_activity: 2026-04-21 -- Phase 2 CONTEXT.md written and committed after single-pass batch discussion; user approved all 5 recommended stances.
+resume_file: .planning/phases/02-data-layer-and-content-schema/02-CONTEXT.md
 progress:
   total_phases: 7
   completed_phases: 1
@@ -25,10 +26,10 @@ See: .planning/PROJECT.md (updated 2026-04-21)
 
 ## Current Position
 
-Phase: 1 of 7 COMPLETE → advancing to Phase 2
-Plan: — (next phase not yet planned)
-Status: Phase 1 verified + marked complete. CI Run #1 green on GitHub Actions. 3 HUMAN-UAT items pre-acknowledged and deferred (live browser FOUC/fonts/persistence trace; structure verified correct). Code review advisory: 2 warnings + 3 info items logged in 01-REVIEW.md for future fix pass.
-Last activity: 2026-04-21 -- Phase 1 complete
+Phase: 2 of 7 — Data Layer and Content Schema (context gathered, ready to plan)
+Plan: — (awaiting /gsd-plan-phase 2)
+Status: Phase 2 CONTEXT.md captures 5 decisions + 7 discretion locks + canonical refs + code insights + deferred ideas. Ready for planning (researcher + planner will read CONTEXT.md to produce RESEARCH.md + PLAN.md files).
+Last activity: 2026-04-21 -- Phase 2 context gathered; commit cfe0e62
 
 Progress: [█░░░░░░░░░] 14% (1/7 phases complete; 4 plans shipped)
 
